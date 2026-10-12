@@ -8,6 +8,8 @@ from app.api.analysis import router as analysis_router
 from app.api.circuits import router as circuits_router
 from app.api.simulation import router as simulation_router
 
+import os
+
 app = FastAPI(
     title="Quantum System Simulation API",
     version="1.0.0",
@@ -19,7 +21,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=[
+    o.strip()
+    for o in os.getenv("CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",")
+    if o.strip()],
     allow_credentials=False,
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
