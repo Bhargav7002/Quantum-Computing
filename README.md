@@ -177,4 +177,5 @@ Deploy the frontend as a single project. Do not use the multi-service import opt
 
 ## Team
 
-Add team member names and roles here.
+K. Jnanendra
+V.S.R Bhargav
