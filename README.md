@@ -177,5 +177,5 @@ Deploy the frontend as a single project. Do not use the multi-service import opt
 
 ## Team
 
--K. Jnanendra
--V.S.R Bhargav
+- K Jnanendra
+- VSR Bhargav
